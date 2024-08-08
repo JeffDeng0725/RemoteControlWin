@@ -1,0 +1,182 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\MainWindow.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\MainWindow.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\MainWindow.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\MainWindow.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\DateTimeZoneSetting.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\DateTimeZoneSetting.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\FocusBractingSetting.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\FocusBractingSetting.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraSetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\CameraSetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\CameraModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\ActionEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\ActionEvent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraEventListener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSharp\\CameraControl\\CameraControl\\CameraEventListener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\Program.cs",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\Program.cs",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\Program.cs",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\Program.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAWwBoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T00:05:35.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\MainWindow.Designer.cs",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\MainWindow.Designer.cs",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\MainWindow.Designer.cs",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\MainWindow.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:57:48.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.resx",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\MainWindow.resx",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\MainWindow.resx",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\MainWindow.resx [\u53EA\u8BFB]",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\MainWindow.resx [\u53EA\u8BFB]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-08-07T23:57:42.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DateTimeZoneSetting.resx",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\DateTimeZoneSetting.resx",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\DateTimeZoneSetting.resx",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\DateTimeZoneSetting.resx [\u53EA\u8BFB]",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\DateTimeZoneSetting.resx [\u53EA\u8BFB]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-08-07T23:57:40.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FocusBractingSetting.resx",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\FocusBractingSetting.resx",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\FocusBractingSetting.resx",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\FocusBractingSetting.resx [\u53EA\u8BFB]",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\FocusBractingSetting.resx [\u53EA\u8BFB]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-08-07T23:57:36.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\App.config",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\App.config",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\App.config [\u53EA\u8BFB]",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\App.config [\u53EA\u8BFB]",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-08-07T23:57:23.165Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CameraSetting.cs",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraSetting.cs",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\CameraSetting.cs",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraSetting.cs",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\CameraSetting.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:47:55.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CameraModel.cs",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraModel.cs",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\CameraModel.cs",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraModel.cs [\u53EA\u8BFB]",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\CameraModel.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:47:54.791Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CameraEventListener.cs",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraEventListener.cs",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\CameraEventListener.cs",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\CameraEventListener.cs [\u53EA\u8BFB]",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\CameraEventListener.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAAA0AAACAmZmZmZkZwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:47:20.246Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ActionEvent.cs",
+              "DocumentMoniker": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\ActionEvent.cs",
+              "RelativeDocumentMoniker": "CSharp\\CameraControl\\CameraControl\\ActionEvent.cs",
+              "ToolTip": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\CameraControl\\CameraControl\\ActionEvent.cs [\u53EA\u8BFB]",
+              "RelativeToolTip": "CSharp\\CameraControl\\CameraControl\\ActionEvent.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAADUAAAAAzczMzMwcwBIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:46:11.425Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
