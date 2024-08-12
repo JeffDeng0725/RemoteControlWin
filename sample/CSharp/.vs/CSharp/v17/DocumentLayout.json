@@ -1,12 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dengwenzhe\\EDSDK_v13.18.10_Windows\\sample\\CSharp\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\CameraControl\\RemoteCapture.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CameraControl\\CameraControl\\RemoteCapture.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\WindowsFormsApplication1\\ProgramTango.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CameraControl\\WindowsFormsApplication1\\ProgramTango.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\CameraControl\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CameraControl\\CameraControl\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 179,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RemoteCapture.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\CameraControl\\RemoteCapture.Designer.cs",
+              "RelativeDocumentMoniker": "CameraControl\\CameraControl\\RemoteCapture.Designer.cs",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\CameraControl\\RemoteCapture.Designer.cs",
+              "RelativeToolTip": "CameraControl\\CameraControl\\RemoteCapture.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T23:03:54.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProgramTango.cs",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\WindowsFormsApplication1\\ProgramTango.cs",
+              "RelativeDocumentMoniker": "CameraControl\\WindowsFormsApplication1\\ProgramTango.cs",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\WindowsFormsApplication1\\ProgramTango.cs",
+              "RelativeToolTip": "CameraControl\\WindowsFormsApplication1\\ProgramTango.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T23:02:13.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\CameraControl\\Program.cs",
+              "RelativeDocumentMoniker": "CameraControl\\CameraControl\\Program.cs",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin-main\\RemoteControlWin-main\\sample\\CSharp\\CameraControl\\CameraControl\\Program.cs",
+              "RelativeToolTip": "CameraControl\\CameraControl\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T23:02:05.456Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

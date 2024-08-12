@@ -4,6 +4,6 @@
     "\\CameraControl",
     "\\CameraControl\\CameraControl"
   ],
-  "SelectedNode": "\\CameraControl\\CameraControl\\Observer.cs",
+  "SelectedNode": "\\CameraControl\\CameraControl\\RemoteCapture.cs",
   "PreviewInSolutionExplorer": false
 }

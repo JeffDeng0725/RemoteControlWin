@@ -1,4 +1,4 @@
-/******************************************************************************
+﻿/******************************************************************************
 *                                                                             *
 *   PROJECT : Eos Digital camera Software Development Kit EDSDK               *
 *                                                                             *
@@ -16,6 +16,10 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace CameraControl
 {
@@ -30,10 +34,19 @@ namespace CameraControl
 
         Rectangle _clip;
 
-        public RemoteCapture(ref CameraController controller , ref ActionSource actionSource)
+        // Updated by Jeff 08/07/2024
+
+        private Double x_position = 0.0
+            , y_position = 0.0;
+        private Double x_1, y_1;
+        private Double x_2, y_2;
+        private Boolean isPaused = false;
+        private Boolean isStopped = false;
+
+        public RemoteCapture(ref CameraController controller, ref ActionSource actionSource)
         {
             InitializeComponent();
-            
+
             _controller = controller;
 
             _actionSource = actionSource;
@@ -237,6 +250,19 @@ namespace CameraControl
             actionRadioButton4.SetActionSource(ref _actionSource);
             actionRadioButton4.Command = ActionEvent.Command.MIRRORUP_OFF;
 
+            // Updated by Jeff 08/07/2024
+            xPosition.Text = xPositionTrackBar.Value.ToString();
+            yPosition.Text = yPositionTrackBar.Value.ToString();
+            startingPositionButton.SetActionSource(ref _actionSource);
+            endingPositionButton.SetActionSource(ref _actionSource);
+            endingPositionButton.Enabled = false;
+            autoScanningButton.SetActionSource(ref _actionSource);
+            autoScanningButton.Enabled = false;
+            pulseScanningButton.SetActionSource(ref _actionSource);
+            pulseScanningButton.Enabled = false;
+            stopScanningButton.SetActionSource(ref _actionSource);
+            stopScanningButton.Enabled = false;
+
 
             // Check Mirror Up Setting.
             if (0xffffffff == _controller.GetModel().MirrorUpSetting || (_controller.GetModel().StartupEvfOutputDevice & EDSDKLib.EDSDK.EvfOutputDevice_TFT) != 0)
@@ -287,6 +313,12 @@ namespace CameraControl
             }
 
             updateAngleInfoLabel("-", "-", "-");
+
+            //Updated by Jeff 08/12/2024
+            // Start the exe file
+
+            startTango();
+            // await Task.Delay(500);
         }
 
         private void RemoteCapture_FormClosing(object sender, FormClosingEventArgs e)
@@ -301,6 +333,9 @@ namespace CameraControl
             _actionSource.FireEvent(ActionEvent.Command.PRESS_OFF, IntPtr.Zero);
             _actionSource.FireEvent(ActionEvent.Command.EVF_AF_OFF, IntPtr.Zero);
             _observerList.ForEach(observer => _controller.GetModel().Remove(ref observer));
+            
+            // Updated by Jeff 08/12/2024
+            closeTango();
         }
 
         private void zoom1_ValueChanged(object sender, EventArgs e)
@@ -459,7 +494,7 @@ namespace CameraControl
                 else
                 {
                     actionRadioButton2.Checked = true;
-                    
+
                     // Rec Button
                     actionButton21.Enabled = true;
                     actionButton22.Enabled = true;
@@ -498,9 +533,150 @@ namespace CameraControl
             }
         }
 
-        private void RemoteCapture_Load(object sender, EventArgs e)
+        // Updated by Jeff 08/07/2024
+        private void zoom1_Scroll(object sender, EventArgs e)
         {
 
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void actionButton29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xPositionTrackBarSlide(object sender, EventArgs e)
+        {
+            x_position = xPositionTrackBar.Value;
+            xPosition.Text = x_position.ToString();
+        }
+
+        private void label35_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yPositionTrackBarSlide(object sender, EventArgs e)
+        {
+            y_position = yPositionTrackBar.Value;
+            yPosition.Text = y_position.ToString();
+        }
+
+        private void startingPositionButton_Click(object sender, EventArgs e)
+        {
+            x_1 = x_position;
+            y_1 = y_position;
+            endingPositionButton.Enabled = true;
+            Console.WriteLine("The starting position is set to: ({x_1}, {y_1})");
+        }
+
+        private void endingPositionButton_Click(object sender, EventArgs e)
+        {
+            x_2 = x_position;
+            y_2 = y_position;
+            autoScanningButton.Enabled = true;
+            Console.WriteLine("The ending position is set to: ({x_2}, {y_2})");
+        }
+
+        private void actionButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void autoScanningButton_Click(object sender, EventArgs e)
+        {
+            pulseScanningButton.Enabled=true;
+            stopScanningButton.Enabled=true;
+            autoTakePicturesFunc();
+        }
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+        public async void autoTakePicturesFunc()
+        {
+            // 重置停止状态
+            isStopped = false;
+
+            // 将句柄转换为 IntPtr
+           // IntPtr buttonHandle = new IntPtr(0x001F082A);
+
+            // 发送 BM_CLICK 消息，模拟点击按钮
+           // SendMessage(buttonHandle, 0x00F5, IntPtr.Zero, IntPtr.Zero);
+
+            //Console.WriteLine("Button clicked.");
+
+            Double x = x_1;
+            Double y = y_1;
+
+            await Task.Run(async () =>
+            {
+                while (!isStopped && (y_2 - y <= 0 || x_2 - x >= 0))
+                {
+                    while (isPaused)
+                    {
+                        await Task.Delay(100); // 短暂的延迟以防止CPU占用过高
+                    }
+                    // Take the picture
+                    _actionSource.FireEvent(ActionEvent.Command.PRESS_HALFWAY, IntPtr.Zero);
+                    await Task.Delay(500);
+
+                    _actionSource.FireEvent(ActionEvent.Command.PRESS_COMPLETELY, IntPtr.Zero);
+                    await Task.Delay(1000);
+
+                    _actionSource.FireEvent(ActionEvent.Command.PRESS_OFF, IntPtr.Zero);
+                    await Task.Delay(500);
+
+                    // Move the plate
+                    // SetMeanderParameters((int)x, (int)y);
+
+                    if (y - 10 > y_2)
+                    {
+                        y -= 10;
+                        Console.WriteLine("y minus 10");
+                    }
+                    else if (x + 10 < x_2)
+                    {
+                        x += 10;
+                        y = y_1;
+                        Console.WriteLine("x pluses 10");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Auto Scanning Finished");
+                        closeTango();
+                        break;
+                    }
+
+                    sendParametersToTango(x.ToString(), y.ToString());
+                    Console.WriteLine($"Now at: {x},{y}");
+
+                    await Task.Delay(500);
+                }
+                if (isStopped)
+                {
+                    // MessageBox.Show("Scanning Stopped", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Console.WriteLine("Scanning Stopped.");
+                    // closeTango(); // 关闭设备或重置状态
+                }
+            });
+        }
+
+        private void RemoteCapture_Load(object sender, EventArgs e)
+        {
+            x_1 = x_position;
+            x_2 = x_position;
+            y_1 = y_position;
+            y_2 = y_position;
         }
 
         private void actionButton26_Click(object sender, EventArgs e)
@@ -510,5 +686,102 @@ namespace CameraControl
             _focusBractingSetting.Dispose();
 
         }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        // Added by Jeff 08/08/2024
+        private void startTango()
+        {
+            string exePath = @"C:\Users\nanouser\AutoJeff\RemoteControl-main\RemoteControl-main\Sample\Swift\CameraControl\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x86\Release\WindowsFormsApplication1.exe";
+
+            try
+            {
+                // Create new process start info
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = exePath;
+
+                // In case we need to pass parameters to the process
+                // startInfo.Arguments = ""; // 例如 "-arg1 -arg2"
+
+                // Start
+                Process process = Process.Start(startInfo);
+
+            }
+            catch (Exception ex)
+            {
+                // Catch error such as Files Not Found
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
+
+        private void closeTango()
+        {
+            string exeName = "WindowsFormsApplication1";
+
+            try
+            {
+                // Get all processes in progress
+                Process[] processes = Process.GetProcessesByName(exeName);
+
+                // Iterate through them
+                foreach (Process process in processes)
+                {
+                    // Kill the process
+                    process.Kill();
+                    process.WaitForExit(); //Wait till it exits
+                    Console.WriteLine($"{exeName} has been closed.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Catch errors
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
+
+        private void pulseScanningButton_Click(object sender, EventArgs e)
+        {
+            isPaused = !isPaused; // 切换暂停状态
+            if (isPaused)
+            {
+                MessageBox.Show("Scanning Paused", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Console.WriteLine("Scanning Paused");
+            }
+            else
+            {
+                MessageBox.Show("Scanning Resumed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Console.WriteLine("Scanning Resumed");
+            }
+        }
+
+        private void stopScanningButton_Click(object sender, EventArgs e)
+        {
+            isStopped = true; // 设置停止状态
+            isPaused = false; // 重置暂停状态，以防止无法退出暂停状态
+            Console.WriteLine("Scanning Stopped");
+            MessageBox.Show("Scanning Stopped", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void sendParametersToTango(string xParam, string yParam)
+        {
+            
+            IntPtr xTextBoxHandle = new IntPtr(0x00130684);
+            IntPtr yTextBoxHandle = new IntPtr(0x004B016E);
+
+            
+            SendMessage(xTextBoxHandle, WM_SETTEXT, IntPtr.Zero, xParam);
+            SendMessage(yTextBoxHandle, WM_SETTEXT, IntPtr.Zero, yParam);
+        }
+
+        // Imoort Windows API Function
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern bool SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, string lParam);
+
+        const uint WM_SETTEXT = 0x000C;
+
+
     }
 }
