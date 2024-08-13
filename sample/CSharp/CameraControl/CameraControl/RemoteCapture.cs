@@ -575,36 +575,47 @@ namespace CameraControl
             yPosition.Text = y_position.ToString();
         }
 
-        private void startingPositionButton_Click(object sender, EventArgs e)
+        private async void StartingPositionButton_Click(object sender, EventArgs e)
         {
-            // x_1 = x_position;
-            // y_1 = y_position;
-            x_1 = getXPosition();
-            y_1 = getYPosition();
+            // Set the position to zero asynchronously
+            await Task.Run(() => SetZero());
+
+            // Ensure that the position is set before getting the X and Y positions
+            x_1 = await Task.Run(() => getXPos());
+            y_1 = await Task.Run(() => getYPos());
+
+            // Set the home position asynchronously
+            await Task.Run(() => SetHome());
+
+            // Enable the ending position button only after setting the home position
             endingPositionButton.Enabled = true;
+
             Console.WriteLine($"The starting position is set to: ({x_1}, {y_1})");
         }
 
-        private void endingPositionButton_Click(object sender, EventArgs e)
+
+        private async void EndingPositionButton_Click(object sender, EventArgs e)
         {
-            // x_2 = x_position;
-            // y_2 = y_position;
-            x_2 = getXPosition();
-            y_2 = getYPosition();
+            // Ensure that the position is set before getting the X and Y positions
+            x_2 = await Task.Run(() => getXPos());
+            y_2 = await Task.Run(() => getYPos());
+
+            // Enable the auto scanning button only after obtaining the ending position
             autoScanningButton.Enabled = true;
+
             Console.WriteLine($"The ending position is set to: ({x_2}, {y_2})");
         }
+
 
         private void actionButton3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void autoScanningButton_Click(object sender, EventArgs e)
+        private async void AutoScanningButton_Click(object sender, EventArgs e)
         {
-
-            // 1. set home
-
+            // Set home position
+            await Task.Run(() => Home());
 
             // Real x step length should be 0.0414 approximately 240um
             // Real y step length should be 0.0281 approximately 160um
@@ -614,23 +625,15 @@ namespace CameraControl
             double xStepLength = 0.0360;
             double yStepLength = 0.0240;
 
-            setXStepLength(xStepLength);
-            setYStepLength(yStepLength);
-
-            int xSteps = (int)((x_2 - x_1) / xStepLength) + 1;
-            int ySteps = (int)((y_2 - y_1) / yStepLength) + 1;
-            setAmountOfStepsX(xSteps);
-            setAmountOfStepsY(ySteps);
-
-            pulseScanningButton.Enabled=true;
-            stopScanningButton.Enabled=true;
-            autoTakePicturesFunc();
+            pulseScanningButton.Enabled = true;
+            stopScanningButton.Enabled = true;
+            AutoTakePicturesFunc(xStepLength, yStepLength);
         }
 
         [DllImport("user32.dll", SetLastError = true)]
         static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
-        public async void autoTakePicturesFunc()
+        public async void AutoTakePicturesFunc(double xStepLength, double yStepLength)
         {
             // 重置停止状态
             isStopped = false;
@@ -648,7 +651,7 @@ namespace CameraControl
 
             await Task.Run(async () =>
             {
-                while (!isStopped && (y_2 - y <= 0 || x_2 - x >= 0))
+                while (!isStopped && (y_2 - y >= 0 || x_2 - x >= 0))
                 {
                     while (isPaused)
                     {
@@ -667,25 +670,32 @@ namespace CameraControl
                     // Move the plate
                     // SetMeanderParameters((int)x, (int)y);
 
-                    if (y - 10 > y_2)
+                    if (y + yStepLength < y_2)
                     {
-                        y -= 10;
-                        Console.WriteLine("y minus 10");
+                        y += yStepLength;
+                        WriteYPosition(y);
+                        MoveRelatively();
+                        Console.WriteLine("y plused");
                     }
-                    else if (x + 10 < x_2)
+                    else if (x + xStepLength < x_2)
                     {
-                        x += 10;
+                        x += xStepLength;
                         y = y_1;
-                        Console.WriteLine("x pluses 10");
+                        WriteXPosition(x);
+                        WriteYPosition(0.0000);
+                        MoveRelatively();
+                        Console.WriteLine("x plused");
                     }
                     else
                     {
+                        MessageBox.Show("Scanning Finished!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Console.WriteLine("Auto Scanning Finished");
                         closeTango();
                         break;
                     }
 
                     // sendParametersToTango(x.ToString(), y.ToString());
+
                     Console.WriteLine($"Now at: {x},{y}");
 
                     await Task.Delay(500);
@@ -785,10 +795,11 @@ namespace CameraControl
             }
         }
 
-        private void stopScanningButton_Click(object sender, EventArgs e)
+        private async void stopScanningButton_Click(object sender, EventArgs e)
         {
             isStopped = true; // 设置停止状态
             isPaused = false; // 重置暂停状态，以防止无法退出暂停状态
+            await Task.Run(() => Home());
             Console.WriteLine("Scanning Stopped");
             MessageBox.Show("Scanning Stopped", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -1009,13 +1020,105 @@ namespace CameraControl
         //        Console.WriteLine("Amount of Steps in Y text box not found.");
         //    }
         //}
-
+        private const uint BM_CLICK = 0x00F5;
         private const int WM_SETTEXT = 0x000C;
+        private const uint WM_GETTEXT = 0x000D;
+        private const uint WM_GETTEXTLENGTH = 0x000E;
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        private static extern int SendMessage(IntPtr hWnd, int msg, IntPtr wParam, string lParam);
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
 
-        public void writeXPosition(double xPosition)
+        // Aliasing the SendMessage method for clicking
+        [DllImport("user32.dll", EntryPoint = "SendMessage", SetLastError = true)]
+        public static extern bool SendMessageClick(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+        // Aliasing the SendMessage method for setting text
+        [DllImport("user32.dll", EntryPoint = "SendMessage", CharSet = CharSet.Auto)]
+        private static extern int SendMessageSetText(IntPtr hWnd, int msg, IntPtr wParam, string lParam);
+
+        // Aliasing the SendMessage method for retrieving text
+        [DllImport("user32.dll", EntryPoint = "SendMessage", SetLastError = true, CharSet = CharSet.Auto)]
+        private static extern int SendMessageGetText(IntPtr hWnd, uint Msg, int wParam, StringBuilder lParam);
+
+        // Aliasing the SendMessage method for retrieving text length
+        [DllImport("user32.dll", EntryPoint = "SendMessage", SetLastError = true)]
+        private static extern int SendMessageGetTextLength(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+        private IntPtr mainWindowHandle = new IntPtr(0x00090CD6); // Handle from the "Set / Get" window
+
+        // Method to simulate pressing the "Set Zero" button
+        public void SetZero()
+        {
+            // Find the "Set Zero" button within the main window
+            IntPtr setZeroButtonHandle = FindWindowEx(mainWindowHandle, IntPtr.Zero, "Button", "Set Zero");
+
+            // Send a click message to the "Set Zero" button
+            if (setZeroButtonHandle != IntPtr.Zero)
+            {
+                SendMessageClick(setZeroButtonHandle, BM_CLICK, IntPtr.Zero, IntPtr.Zero);
+                Console.WriteLine("Set Zero button clicked.");
+            }
+            else
+            {
+                Console.WriteLine("Set Zero button not found.");
+            }
+        }
+
+        // Method to simulate pressing the "Pos -> Home" button
+        public void SetHome()
+        {
+            // Find the "Pos -> Home" button within the main window
+            IntPtr setHomeButtonHandle = FindWindowEx(mainWindowHandle, IntPtr.Zero, "Button", "Pos -> Home");
+
+            // Send a click message to the "Pos -> Home" button
+            if (setHomeButtonHandle != IntPtr.Zero)
+            {
+                SendMessageClick(setHomeButtonHandle, BM_CLICK, IntPtr.Zero, IntPtr.Zero);
+                Console.WriteLine("Pos -> Home button clicked.");
+            }
+            else
+            {
+                Console.WriteLine("Pos -> Home button not found.");
+            }
+        }
+
+        // Method to simulate pressing the "Relative" button
+        public void MoveRelatively()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(MoveRelatively));
+            }
+            else
+            {
+                // Find the "Relative" button within the main window
+                IntPtr relativeButtonHandle = FindWindowEx(this.Handle, IntPtr.Zero, "Button", "Relative");
+
+                // Send a click message to the "Relative" button
+                SendMessageClick(relativeButtonHandle, BM_CLICK, IntPtr.Zero, IntPtr.Zero);
+            }
+        }
+
+        // Method to simulate pressing the "Home" button
+        public void Home()
+        {
+            if (this.InvokeRequired)
+            {
+                // If the current thread is not the UI thread, marshal the call to the UI thread
+                this.Invoke(new Action(Home));
+            }
+            else
+            {
+                // Find the "Home" button within the main window
+                IntPtr homeButtonHandle = FindWindowEx(this.Handle, IntPtr.Zero, "Button", "Home");
+
+                // Send a click message to the "Home" button
+                SendMessageClick(homeButtonHandle, BM_CLICK, IntPtr.Zero, IntPtr.Zero);
+            }
+        }
+
+        // Method to write the X position
+        public void WriteXPosition(double xPosition)
         {
             // Replace with the actual handle of the X textbox
             IntPtr hWndTextBoxX = new IntPtr(0x00061ADA);  // Example handle, replace with actual if different
@@ -1027,10 +1130,11 @@ namespace CameraControl
 
             string textToWrite = xPosition.ToString("F4"); // Formatting to 4 decimal places
 
-            SendMessage(hWndTextBoxX, WM_SETTEXT, IntPtr.Zero, textToWrite);
+            SendMessageSetText(hWndTextBoxX, WM_SETTEXT, IntPtr.Zero, textToWrite);
         }
 
-        public void writeYPosition(double yPosition)
+        // Method to write the Y position
+        public void WriteYPosition(double yPosition)
         {
             // Replace with the actual handle of the Y textbox
             IntPtr hWndTextBoxY = new IntPtr(0x00061ADB);  // Example handle, replace with actual if different
@@ -1042,8 +1146,72 @@ namespace CameraControl
 
             string textToWrite = yPosition.ToString("F4"); // Formatting to 4 decimal places
 
-            SendMessage(hWndTextBoxY, WM_SETTEXT, IntPtr.Zero, textToWrite);
+            SendMessageSetText(hWndTextBoxY, WM_SETTEXT, IntPtr.Zero, textToWrite);
         }
 
+        // Method to get the X position
+        public double getXPos()
+        {
+            IntPtr hWndTextBox = new IntPtr(0x000D0A60);  // Handle from your screenshot
+
+            if (hWndTextBox == IntPtr.Zero)
+            {
+                throw new Exception("Text box handle is invalid.");
+            }
+
+            StringBuilder sb = new StringBuilder(256); // Arbitrary large buffer size
+            int textLength = SendMessageGetText(hWndTextBox, WM_GETTEXT, sb.Capacity, sb);
+
+            if (textLength > 0)
+            {
+                if (double.TryParse(sb.ToString(), out double result))
+                {
+                    return result;
+                }
+                else
+                {
+                    throw new Exception("Failed to parse X Position to a double.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Text box is empty or text could not be retrieved.");
+                throw new Exception("X Position text box is empty.");
+            }
+        }
+
+
+        // Method to get the Y position
+        public double getYPos()
+        {
+            IntPtr hWndTextBox = new IntPtr(0x000D0A5C);  // Handle from your screenshot
+
+            if (hWndTextBox == IntPtr.Zero)
+            {
+                throw new Exception("Text box handle is invalid.");
+            }
+
+            // Get the length of the text in the textbox
+            int length = SendMessageGetTextLength(hWndTextBox, WM_GETTEXTLENGTH, IntPtr.Zero, IntPtr.Zero);
+
+            if (length > 0)
+            {
+                StringBuilder sb = new StringBuilder(length + 1); // +1 for the null terminator
+                SendMessageGetText(hWndTextBox, WM_GETTEXT, sb.Capacity, sb);
+
+                if (double.TryParse(sb.ToString(), out double result))
+                {
+                    return result;
+                }
+                else
+                {
+                    throw new Exception("Failed to parse Y Position to a double.");
+                }
+            }
+            else
+            {
+                throw new Exception("Y Position text box is empty.");
+            }
+        }
     }
 }

@@ -572,7 +572,7 @@ namespace CameraControl
             this.autoScanningButton.TabIndex = 114;
             this.autoScanningButton.Text = "Start auto scanning!";
             this.autoScanningButton.UseVisualStyleBackColor = true;
-            this.autoScanningButton.Click += new System.EventHandler(this.autoScanningButton_Click);
+            this.autoScanningButton.Click += new System.EventHandler(this.AutoScanningButton_Click);
             // 
             // endingPositionButton
             // 
@@ -583,7 +583,7 @@ namespace CameraControl
             this.endingPositionButton.TabIndex = 113;
             this.endingPositionButton.Text = "Comfirm Your Ending Position (Botton Right)";
             this.endingPositionButton.UseVisualStyleBackColor = true;
-            this.endingPositionButton.Click += new System.EventHandler(this.endingPositionButton_Click);
+            this.endingPositionButton.Click += new System.EventHandler(this.EndingPositionButton_Click);
             // 
             // startingPositionButton
             // 
@@ -594,7 +594,7 @@ namespace CameraControl
             this.startingPositionButton.TabIndex = 112;
             this.startingPositionButton.Text = "Confirm Your Starting Position (Top Left)";
             this.startingPositionButton.UseVisualStyleBackColor = true;
-            this.startingPositionButton.Click += new System.EventHandler(this.startingPositionButton_Click);
+            this.startingPositionButton.Click += new System.EventHandler(this.StartingPositionButton_Click);
             // 
             // actionButton26
             // 
