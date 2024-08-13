@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace CameraControl
 {
@@ -318,6 +319,9 @@ namespace CameraControl
             // Start the exe file
 
             startTango();
+            MessageBox.Show("Please Connect Manually Following the Instruction:" +
+                "\n 1. Select COM5. " +
+                "\n 2. Click \"connect\".", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             // await Task.Delay(500);
         }
 
@@ -573,18 +577,22 @@ namespace CameraControl
 
         private void startingPositionButton_Click(object sender, EventArgs e)
         {
-            x_1 = x_position;
-            y_1 = y_position;
+            // x_1 = x_position;
+            // y_1 = y_position;
+            x_1 = getXPosition();
+            y_1 = getYPosition();
             endingPositionButton.Enabled = true;
-            Console.WriteLine("The starting position is set to: ({x_1}, {y_1})");
+            Console.WriteLine($"The starting position is set to: ({x_1}, {y_1})");
         }
 
         private void endingPositionButton_Click(object sender, EventArgs e)
         {
-            x_2 = x_position;
-            y_2 = y_position;
+            // x_2 = x_position;
+            // y_2 = y_position;
+            x_2 = getXPosition();
+            y_2 = getYPosition();
             autoScanningButton.Enabled = true;
-            Console.WriteLine("The ending position is set to: ({x_2}, {y_2})");
+            Console.WriteLine($"The ending position is set to: ({x_2}, {y_2})");
         }
 
         private void actionButton3_Click(object sender, EventArgs e)
@@ -594,6 +602,26 @@ namespace CameraControl
 
         private void autoScanningButton_Click(object sender, EventArgs e)
         {
+
+            // 1. set home
+
+
+            // Real x step length should be 0.0414 approximately 240um
+            // Real y step length should be 0.0281 approximately 160um
+
+            // in this case, we choose x step length to be 0.036
+            // in this case, we choose y step length to be 0.024 instead
+            double xStepLength = 0.0360;
+            double yStepLength = 0.0240;
+
+            setXStepLength(xStepLength);
+            setYStepLength(yStepLength);
+
+            int xSteps = (int)((x_2 - x_1) / xStepLength) + 1;
+            int ySteps = (int)((y_2 - y_1) / yStepLength) + 1;
+            setAmountOfStepsX(xSteps);
+            setAmountOfStepsY(ySteps);
+
             pulseScanningButton.Enabled=true;
             stopScanningButton.Enabled=true;
             autoTakePicturesFunc();
@@ -657,7 +685,7 @@ namespace CameraControl
                         break;
                     }
 
-                    sendParametersToTango(x.ToString(), y.ToString());
+                    // sendParametersToTango(x.ToString(), y.ToString());
                     Console.WriteLine($"Now at: {x},{y}");
 
                     await Task.Delay(500);
@@ -695,7 +723,7 @@ namespace CameraControl
         // Added by Jeff 08/08/2024
         private void startTango()
         {
-            string exePath = @"C:\Users\nanouser\AutoJeff\RemoteControl-main\RemoteControl-main\Sample\Swift\CameraControl\VS2017_Csharp\VS2017_Csharp_TriggerExample\WindowsFormsApplication1\obj\x86\Release\WindowsFormsApplication1.exe";
+            string exePath = @"C:\Program Files (x86)\SwitchBoard\SwitchBoard.exe";
 
             try
             {
@@ -765,23 +793,257 @@ namespace CameraControl
             MessageBox.Show("Scanning Stopped", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void sendParametersToTango(string xParam, string yParam)
-        {
-            
-            IntPtr xTextBoxHandle = new IntPtr(0x00130684);
-            IntPtr yTextBoxHandle = new IntPtr(0x004B016E);
+        // Updated by Jeff 08/23/2024 ######################################################
 
-            
-            SendMessage(xTextBoxHandle, WM_SETTEXT, IntPtr.Zero, xParam);
-            SendMessage(yTextBoxHandle, WM_SETTEXT, IntPtr.Zero, yParam);
+        //// Import necessary Win32 API functions
+        //[DllImport("user32.dll", SetLastError = true)]
+        //static extern bool EnumChildWindows(IntPtr hWndParent, EnumWindowsProc lpEnumFunc, IntPtr lParam);
+
+        //[DllImport("user32.dll", SetLastError = true)]
+        //static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, StringBuilder lParam);
+
+        //[DllImport("user32.dll", SetLastError = true)]
+        //static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, string lParam);
+
+        //[DllImport("user32.dll", SetLastError = true)]
+        //static extern int GetWindowText(IntPtr hWnd, StringBuilder lpString, int nMaxCount);
+
+        //const uint WM_GETTEXT = 0x000D;
+        //const uint WM_GETTEXTLENGTH = 0x000E;
+        //const uint WM_SETTEXT = 0x000C;
+        //const uint BM_CLICK = 0x00F5;
+
+        //delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
+
+        //public double getXPosition()
+        //{
+        //    IntPtr hWndTextBoxX = new IntPtr(0x00051486);  // Handle from your screenshot
+
+        //    if (hWndTextBoxX == IntPtr.Zero)
+        //    {
+        //        throw new Exception("Text box handle is invalid.");
+        //    }
+
+        //    int length = (int)SendMessage(hWndTextBoxX, WM_GETTEXTLENGTH, IntPtr.Zero, IntPtr.Zero);
+
+        //    if (length > 0)
+        //    {
+        //        StringBuilder sb = new StringBuilder(length + 1); // +1 for the null terminator
+        //        SendMessage(hWndTextBoxX, WM_GETTEXT, (IntPtr)sb.Capacity, sb);
+
+        //        if (double.TryParse(sb.ToString(), out double result))
+        //        {
+        //            return result;
+        //        }
+        //        else
+        //        {
+        //            throw new Exception("Failed to parse X Position to a double.");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        throw new Exception("X Position text box is empty.");
+        //    }
+        //}
+
+        //public double getYPosition()
+        //{
+        //    IntPtr hWndTextBoxY = new IntPtr(0x00051488);  // Replace with your actual handle if different
+
+        //    if (hWndTextBoxY == IntPtr.Zero)
+        //    {
+        //        throw new Exception("Text box handle is invalid.");
+        //    }
+
+        //    int length = (int)SendMessage(hWndTextBoxY, WM_GETTEXTLENGTH, IntPtr.Zero, IntPtr.Zero);
+
+        //    if (length > 0)
+        //    {
+        //        StringBuilder sb = new StringBuilder(length + 1); // +1 for the null terminator
+        //        SendMessage(hWndTextBoxY, WM_GETTEXT, (IntPtr)sb.Capacity, sb);
+
+        //        if (double.TryParse(sb.ToString(), out double result))
+        //        {
+        //            return result;
+        //        }
+        //        else
+        //        {
+        //            throw new Exception("Failed to parse Y Position to a double.");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        throw new Exception("Y Position text box is empty.");
+        //    }
+        //}
+
+        //public void checkUnidirectional()
+        //{
+        //    IntPtr hWndButton = new IntPtr(0x001076C);  // The handle for the "Unidirectional" radio button
+
+        //    if (hWndButton == IntPtr.Zero)
+        //    {
+        //        throw new Exception("Radio button handle is invalid.");
+        //    }
+
+        //    SendMessage(hWndButton, BM_CLICK, IntPtr.Zero, IntPtr.Zero);
+        //    Console.WriteLine("Unidirectional option checked.");
+        //}
+
+        //public void setXStepLength(double stepLengthX)
+        //{
+        //    IntPtr hWndContainer = new IntPtr(0x001076E);  // The handle of the container (whole box)
+        //    IntPtr hWndTextBox = IntPtr.Zero;
+
+        //    EnumChildWindows(hWndContainer, (hWnd, lParam) =>
+        //    {
+        //        StringBuilder windowText = new StringBuilder(256);
+        //        GetWindowText(hWnd, windowText, windowText.Capacity);
+
+        //        if (windowText.ToString().Contains("Step length X"))
+        //        {
+        //            hWndTextBox = hWnd;
+        //            return false;  // Stop enumeration
+        //        }
+
+        //        return true;  // Continue enumeration
+        //    }, IntPtr.Zero);
+
+        //    if (hWndTextBox != IntPtr.Zero)
+        //    {
+        //        SendMessage(hWndTextBox, WM_SETTEXT, IntPtr.Zero, stepLengthX.ToString("F4"));  // Formatting to 4 decimal places
+        //        Console.WriteLine("Step length X set to: " + stepLengthX);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Step length X text box not found.");
+        //    }
+        //}
+
+        //public void setYStepLength(double stepLengthY)
+        //{
+        //    IntPtr hWndContainer = new IntPtr(0x001076E);  // The handle of the container (whole box)
+        //    IntPtr hWndTextBox = IntPtr.Zero;
+
+        //    EnumChildWindows(hWndContainer, (hWnd, lParam) =>
+        //    {
+        //        StringBuilder windowText = new StringBuilder(256);
+        //        GetWindowText(hWnd, windowText, windowText.Capacity);
+
+        //        if (windowText.ToString().Contains("Step length Y"))
+        //        {
+        //            hWndTextBox = hWnd;
+        //            return false;  // Stop enumeration
+        //        }
+
+        //        return true;  // Continue enumeration
+        //    }, IntPtr.Zero);
+
+        //    if (hWndTextBox != IntPtr.Zero)
+        //    {
+        //        SendMessage(hWndTextBox, WM_SETTEXT, IntPtr.Zero, stepLengthY.ToString("F4"));  // Formatting to 4 decimal places
+        //        Console.WriteLine("Step length Y set to: " + stepLengthY);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Step length Y text box not found.");
+        //    }
+        //}
+
+        //public void setAmountOfStepsX(int xSteps)
+        //{
+        //    IntPtr hWndContainer = new IntPtr(0x001076E);  // The handle of the container (whole box)
+        //    IntPtr hWndTextBox = IntPtr.Zero;
+
+        //    EnumChildWindows(hWndContainer, (hWnd, lParam) =>
+        //    {
+        //        StringBuilder windowText = new StringBuilder(256);
+        //        GetWindowText(hWnd, windowText, windowText.Capacity);
+
+        //        if (windowText.ToString().Contains("Amount of steps in X"))
+        //        {
+        //            hWndTextBox = hWnd;
+        //            return false;  // Stop enumeration
+        //        }
+
+        //        return true;  // Continue enumeration
+        //    }, IntPtr.Zero);
+
+        //    if (hWndTextBox != IntPtr.Zero)
+        //    {
+        //        SendMessage(hWndTextBox, WM_SETTEXT, IntPtr.Zero, xSteps.ToString());
+        //        Console.WriteLine("Amount of Steps in X set to: " + xSteps);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Amount of Steps in X text box not found.");
+        //    }
+        //}
+
+        //public void setAmountOfStepsY(int ySteps)
+        //{
+        //    IntPtr hWndContainer = new IntPtr(0x001076E);  // The handle of the container (whole box)
+        //    IntPtr hWndTextBox = IntPtr.Zero;
+
+        //    EnumChildWindows(hWndContainer, (hWnd, lParam) =>
+        //    {
+        //        StringBuilder windowText = new StringBuilder(256);
+        //        GetWindowText(hWnd, windowText, windowText.Capacity);
+
+        //        if (windowText.ToString().Contains("Amount of steps in Y"))
+        //        {
+        //            hWndTextBox = hWnd;
+        //            return false;  // Stop enumeration
+        //        }
+
+        //        return true;  // Continue enumeration
+        //    }, IntPtr.Zero);
+
+        //    if (hWndTextBox != IntPtr.Zero)
+        //    {
+        //        SendMessage(hWndTextBox, WM_SETTEXT, IntPtr.Zero, ySteps.ToString());
+        //        Console.WriteLine("Amount of Steps in Y set to: " + ySteps);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Amount of Steps in Y text box not found.");
+        //    }
+        //}
+
+        private const int WM_SETTEXT = 0x000C;
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern int SendMessage(IntPtr hWnd, int msg, IntPtr wParam, string lParam);
+
+        public void writeXPosition(double xPosition)
+        {
+            // Replace with the actual handle of the X textbox
+            IntPtr hWndTextBoxX = new IntPtr(0x00061ADA);  // Example handle, replace with actual if different
+
+            if (hWndTextBoxX == IntPtr.Zero)
+            {
+                throw new Exception("X Position text box handle is invalid.");
+            }
+
+            string textToWrite = xPosition.ToString("F4"); // Formatting to 4 decimal places
+
+            SendMessage(hWndTextBoxX, WM_SETTEXT, IntPtr.Zero, textToWrite);
         }
 
-        // Imoort Windows API Function
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern bool SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, string lParam);
+        public void writeYPosition(double yPosition)
+        {
+            // Replace with the actual handle of the Y textbox
+            IntPtr hWndTextBoxY = new IntPtr(0x00061ADB);  // Example handle, replace with actual if different
 
-        const uint WM_SETTEXT = 0x000C;
+            if (hWndTextBoxY == IntPtr.Zero)
+            {
+                throw new Exception("Y Position text box handle is invalid.");
+            }
 
+            string textToWrite = yPosition.ToString("F4"); // Formatting to 4 decimal places
+
+            SendMessage(hWndTextBoxY, WM_SETTEXT, IntPtr.Zero, textToWrite);
+        }
 
     }
 }
