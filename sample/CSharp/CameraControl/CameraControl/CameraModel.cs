@@ -1,4 +1,4 @@
-/******************************************************************************
+﻿/******************************************************************************
 *                                                                             *
 *   PROJECT : Eos Digital camera Software Development Kit EDSDK               *
 *                                                                             *
@@ -49,6 +49,7 @@ namespace CameraControl
         public EDSDKLib.EDSDK.EdsRect ZoomRect { get; set; }
         public uint FlashMode { get; set; }
         public bool canDownloadImage { get; set; }
+        public string SaveDirectory { get; set; } // 添加全局保存路径 08/21/2024
         public bool isEvfEnable { get; set; }
         public uint TempStatus { get; set; }
         public uint RollPitch { get; set; }

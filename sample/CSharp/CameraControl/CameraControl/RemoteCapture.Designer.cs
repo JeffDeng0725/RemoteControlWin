@@ -36,10 +36,23 @@ namespace CameraControl
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.movieHFR1 = new CameraControl.MovieHFRComboBox();
             this.label33 = new System.Windows.Forms.Label();
+            this.aspect1 = new CameraControl.AspectComboBox();
             this.label32 = new System.Windows.Forms.Label();
+            this.pictureStyle1 = new CameraControl.PictureStyleComboBox();
             this.label31 = new System.Windows.Forms.Label();
+            this.movieQuality1 = new CameraControl.MovieQualityComboBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.driveMode1 = new CameraControl.DriveModeComboBox();
+            this.imageQuality1 = new CameraControl.ImageQualityComboBox();
+            this.exposureComp1 = new CameraControl.ExposureCompComboBox();
+            this.meteringMode1 = new CameraControl.MeteringModeComboBox();
+            this.whiteBalance1 = new CameraControl.WhiteBalanceComboBox();
+            this.iso1 = new CameraControl.IsoComboBox();
+            this.av1 = new CameraControl.AvComboBox();
+            this.tv1 = new CameraControl.TvComboBox();
+            this.aeMode1 = new CameraControl.AeModeComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,6 +64,8 @@ namespace CameraControl
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.afMode1 = new CameraControl.AfModeComboBox();
+            this.flashMode1 = new CameraControl.FlashModeComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,26 +77,75 @@ namespace CameraControl
             this.label22 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.actionRadioButton1 = new CameraControl.ActionRadioButton();
+            this.actionRadioButton2 = new CameraControl.ActionRadioButton();
             this.label30 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.actionRadioButton3 = new CameraControl.ActionRadioButton();
+            this.actionRadioButton4 = new CameraControl.ActionRadioButton();
             this.xPositionTrackBar = new System.Windows.Forms.TrackBar();
             this.yPositionTrackBar = new System.Windows.Forms.TrackBar();
             this.label34 = new System.Windows.Forms.Label();
             this.xPosition = new System.Windows.Forms.Label();
             this.yPosition = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.folderPath3 = new System.Windows.Forms.Label();
+            this.SelectFolder3 = new System.Windows.Forms.Button();
+            this.label55 = new System.Windows.Forms.Label();
+            this.StartProcessingButton = new System.Windows.Forms.Button();
+            this.label51 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label54 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label53 = new System.Windows.Forms.Label();
+            this.SelectFolder2 = new System.Windows.Forms.Button();
+            this.label52 = new System.Windows.Forms.Label();
+            this.folderPath2 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.folderPath = new System.Windows.Forms.Label();
+            this.SelectFolder = new CameraControl.ActionButton();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.stopScanningButton = new CameraControl.ActionButton();
-            this.pulseScanningButton = new CameraControl.ActionButton();
-            this.autoScanningButton = new CameraControl.ActionButton();
-            this.endingPositionButton = new CameraControl.ActionButton();
             this.startingPositionButton = new CameraControl.ActionButton();
+            this.pulseScanningButton = new CameraControl.ActionButton();
+            this.endingPositionButton = new CameraControl.ActionButton();
+            this.autoScanningButton = new CameraControl.ActionButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.bt_getpos = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bt_disconnect = new System.Windows.Forms.Button();
+            this.bt_connect = new System.Windows.Forms.Button();
             this.actionButton26 = new CameraControl.ActionButton();
             this.actionButton25 = new CameraControl.ActionButton();
-            this.actionRadioButton3 = new CameraControl.ActionRadioButton();
-            this.actionRadioButton4 = new CameraControl.ActionRadioButton();
             this.actionButton24 = new CameraControl.ActionButton();
             this.actionButton23 = new CameraControl.ActionButton();
-            this.actionRadioButton1 = new CameraControl.ActionRadioButton();
-            this.actionRadioButton2 = new CameraControl.ActionRadioButton();
             this.actionButton22 = new CameraControl.ActionButton();
             this.actionButton21 = new CameraControl.ActionButton();
             this.tempStatusLabel1 = new CameraControl.TempStatusLabel();
@@ -111,26 +175,21 @@ namespace CameraControl
             this.actionButton3 = new CameraControl.ActionButton();
             this.actionButton1 = new CameraControl.ActionButton();
             this.evfPictureBox1 = new CameraControl.EvfPictureBox();
-            this.movieHFR1 = new CameraControl.MovieHFRComboBox();
-            this.aspect1 = new CameraControl.AspectComboBox();
-            this.pictureStyle1 = new CameraControl.PictureStyleComboBox();
-            this.movieQuality1 = new CameraControl.MovieQualityComboBox();
-            this.driveMode1 = new CameraControl.DriveModeComboBox();
-            this.imageQuality1 = new CameraControl.ImageQualityComboBox();
-            this.exposureComp1 = new CameraControl.ExposureCompComboBox();
-            this.meteringMode1 = new CameraControl.MeteringModeComboBox();
-            this.whiteBalance1 = new CameraControl.WhiteBalanceComboBox();
-            this.iso1 = new CameraControl.IsoComboBox();
-            this.av1 = new CameraControl.AvComboBox();
-            this.tv1 = new CameraControl.TvComboBox();
-            this.aeMode1 = new CameraControl.AeModeComboBox();
-            this.afMode1 = new CameraControl.AfModeComboBox();
-            this.flashMode1 = new CameraControl.FlashModeComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xPositionTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yPositionTrackBar)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zoom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evfPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -237,6 +296,17 @@ namespace CameraControl
             this.panel1.Size = new System.Drawing.Size(330, 592);
             this.panel1.TabIndex = 78;
             // 
+            // movieHFR1
+            // 
+            this.movieHFR1.BackColor = System.Drawing.SystemColors.Window;
+            this.movieHFR1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.movieHFR1.Enabled = false;
+            this.movieHFR1.FormattingEnabled = true;
+            this.movieHFR1.Location = new System.Drawing.Point(98, 450);
+            this.movieHFR1.Name = "movieHFR1";
+            this.movieHFR1.Size = new System.Drawing.Size(221, 21);
+            this.movieHFR1.TabIndex = 111;
+            // 
             // label33
             // 
             this.label33.AutoSize = true;
@@ -245,6 +315,17 @@ namespace CameraControl
             this.label33.Size = new System.Drawing.Size(61, 13);
             this.label33.TabIndex = 110;
             this.label33.Text = "MovieHFR:";
+            // 
+            // aspect1
+            // 
+            this.aspect1.BackColor = System.Drawing.SystemColors.Window;
+            this.aspect1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.aspect1.Enabled = false;
+            this.aspect1.FormattingEnabled = true;
+            this.aspect1.Location = new System.Drawing.Point(98, 512);
+            this.aspect1.Name = "aspect1";
+            this.aspect1.Size = new System.Drawing.Size(221, 21);
+            this.aspect1.TabIndex = 109;
             // 
             // label32
             // 
@@ -255,6 +336,16 @@ namespace CameraControl
             this.label32.TabIndex = 95;
             this.label32.Text = "Aspect:";
             // 
+            // pictureStyle1
+            // 
+            this.pictureStyle1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pictureStyle1.Enabled = false;
+            this.pictureStyle1.FormattingEnabled = true;
+            this.pictureStyle1.Location = new System.Drawing.Point(98, 481);
+            this.pictureStyle1.Name = "pictureStyle1";
+            this.pictureStyle1.Size = new System.Drawing.Size(221, 21);
+            this.pictureStyle1.TabIndex = 93;
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -264,6 +355,16 @@ namespace CameraControl
             this.label31.TabIndex = 92;
             this.label31.Text = "PictureStyle:";
             // 
+            // movieQuality1
+            // 
+            this.movieQuality1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.movieQuality1.Enabled = false;
+            this.movieQuality1.FormattingEnabled = true;
+            this.movieQuality1.Location = new System.Drawing.Point(98, 416);
+            this.movieQuality1.Name = "movieQuality1";
+            this.movieQuality1.Size = new System.Drawing.Size(221, 21);
+            this.movieQuality1.TabIndex = 91;
+            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -272,6 +373,96 @@ namespace CameraControl
             this.label29.Size = new System.Drawing.Size(71, 13);
             this.label29.TabIndex = 90;
             this.label29.Text = "MovieQuality:";
+            // 
+            // driveMode1
+            // 
+            this.driveMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.driveMode1.Enabled = false;
+            this.driveMode1.FormattingEnabled = true;
+            this.driveMode1.Location = new System.Drawing.Point(98, 311);
+            this.driveMode1.Name = "driveMode1";
+            this.driveMode1.Size = new System.Drawing.Size(221, 21);
+            this.driveMode1.TabIndex = 8;
+            // 
+            // imageQuality1
+            // 
+            this.imageQuality1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.imageQuality1.Enabled = false;
+            this.imageQuality1.FormattingEnabled = true;
+            this.imageQuality1.Location = new System.Drawing.Point(98, 275);
+            this.imageQuality1.Name = "imageQuality1";
+            this.imageQuality1.Size = new System.Drawing.Size(221, 21);
+            this.imageQuality1.TabIndex = 7;
+            // 
+            // exposureComp1
+            // 
+            this.exposureComp1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.exposureComp1.Enabled = false;
+            this.exposureComp1.FormattingEnabled = true;
+            this.exposureComp1.Location = new System.Drawing.Point(98, 239);
+            this.exposureComp1.Name = "exposureComp1";
+            this.exposureComp1.Size = new System.Drawing.Size(221, 21);
+            this.exposureComp1.TabIndex = 6;
+            // 
+            // meteringMode1
+            // 
+            this.meteringMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.meteringMode1.Enabled = false;
+            this.meteringMode1.FormattingEnabled = true;
+            this.meteringMode1.Location = new System.Drawing.Point(98, 205);
+            this.meteringMode1.Name = "meteringMode1";
+            this.meteringMode1.Size = new System.Drawing.Size(221, 21);
+            this.meteringMode1.TabIndex = 5;
+            // 
+            // whiteBalance1
+            // 
+            this.whiteBalance1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.whiteBalance1.Enabled = false;
+            this.whiteBalance1.FormattingEnabled = true;
+            this.whiteBalance1.Location = new System.Drawing.Point(98, 170);
+            this.whiteBalance1.Name = "whiteBalance1";
+            this.whiteBalance1.Size = new System.Drawing.Size(221, 21);
+            this.whiteBalance1.TabIndex = 4;
+            // 
+            // iso1
+            // 
+            this.iso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.iso1.Enabled = false;
+            this.iso1.FormattingEnabled = true;
+            this.iso1.Location = new System.Drawing.Point(98, 135);
+            this.iso1.Name = "iso1";
+            this.iso1.Size = new System.Drawing.Size(221, 21);
+            this.iso1.TabIndex = 3;
+            // 
+            // av1
+            // 
+            this.av1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.av1.Enabled = false;
+            this.av1.FormattingEnabled = true;
+            this.av1.Location = new System.Drawing.Point(98, 101);
+            this.av1.Name = "av1";
+            this.av1.Size = new System.Drawing.Size(221, 21);
+            this.av1.TabIndex = 2;
+            // 
+            // tv1
+            // 
+            this.tv1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tv1.Enabled = false;
+            this.tv1.FormattingEnabled = true;
+            this.tv1.Location = new System.Drawing.Point(98, 66);
+            this.tv1.Name = "tv1";
+            this.tv1.Size = new System.Drawing.Size(221, 21);
+            this.tv1.TabIndex = 1;
+            // 
+            // aeMode1
+            // 
+            this.aeMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.aeMode1.Enabled = false;
+            this.aeMode1.FormattingEnabled = true;
+            this.aeMode1.Location = new System.Drawing.Point(98, 31);
+            this.aeMode1.Name = "aeMode1";
+            this.aeMode1.Size = new System.Drawing.Size(221, 21);
+            this.aeMode1.TabIndex = 0;
             // 
             // label17
             // 
@@ -372,6 +563,26 @@ namespace CameraControl
             this.label24.TabIndex = 79;
             this.label24.Text = "Capture Setting";
             // 
+            // afMode1
+            // 
+            this.afMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.afMode1.Enabled = false;
+            this.afMode1.FormattingEnabled = true;
+            this.afMode1.Location = new System.Drawing.Point(98, 347);
+            this.afMode1.Name = "afMode1";
+            this.afMode1.Size = new System.Drawing.Size(221, 21);
+            this.afMode1.TabIndex = 9;
+            // 
+            // flashMode1
+            // 
+            this.flashMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.flashMode1.Enabled = false;
+            this.flashMode1.FormattingEnabled = true;
+            this.flashMode1.Location = new System.Drawing.Point(98, 381);
+            this.flashMode1.Name = "flashMode1";
+            this.flashMode1.Size = new System.Drawing.Size(221, 21);
+            this.flashMode1.TabIndex = 10;
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -471,6 +682,30 @@ namespace CameraControl
             this.panel2.Size = new System.Drawing.Size(96, 50);
             this.panel2.TabIndex = 103;
             // 
+            // actionRadioButton1
+            // 
+            this.actionRadioButton1.AutoSize = true;
+            this.actionRadioButton1.Command = CameraControl.ActionEvent.Command.NONE;
+            this.actionRadioButton1.Location = new System.Drawing.Point(7, 3);
+            this.actionRadioButton1.Name = "actionRadioButton1";
+            this.actionRadioButton1.Size = new System.Drawing.Size(70, 17);
+            this.actionRadioButton1.TabIndex = 99;
+            this.actionRadioButton1.TabStop = true;
+            this.actionRadioButton1.Text = "StillImage";
+            this.actionRadioButton1.UseVisualStyleBackColor = true;
+            // 
+            // actionRadioButton2
+            // 
+            this.actionRadioButton2.AutoSize = true;
+            this.actionRadioButton2.Command = CameraControl.ActionEvent.Command.NONE;
+            this.actionRadioButton2.Location = new System.Drawing.Point(7, 27);
+            this.actionRadioButton2.Name = "actionRadioButton2";
+            this.actionRadioButton2.Size = new System.Drawing.Size(81, 17);
+            this.actionRadioButton2.TabIndex = 100;
+            this.actionRadioButton2.TabStop = true;
+            this.actionRadioButton2.Text = "MovieMode";
+            this.actionRadioButton2.UseVisualStyleBackColor = true;
+            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -488,6 +723,30 @@ namespace CameraControl
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(96, 50);
             this.panel3.TabIndex = 104;
+            // 
+            // actionRadioButton3
+            // 
+            this.actionRadioButton3.AutoSize = true;
+            this.actionRadioButton3.Command = CameraControl.ActionEvent.Command.NONE;
+            this.actionRadioButton3.Location = new System.Drawing.Point(7, 3);
+            this.actionRadioButton3.Name = "actionRadioButton3";
+            this.actionRadioButton3.Size = new System.Drawing.Size(41, 17);
+            this.actionRadioButton3.TabIndex = 99;
+            this.actionRadioButton3.TabStop = true;
+            this.actionRadioButton3.Text = "ON";
+            this.actionRadioButton3.UseVisualStyleBackColor = true;
+            // 
+            // actionRadioButton4
+            // 
+            this.actionRadioButton4.AutoSize = true;
+            this.actionRadioButton4.Command = CameraControl.ActionEvent.Command.NONE;
+            this.actionRadioButton4.Location = new System.Drawing.Point(7, 27);
+            this.actionRadioButton4.Name = "actionRadioButton4";
+            this.actionRadioButton4.Size = new System.Drawing.Size(45, 17);
+            this.actionRadioButton4.TabIndex = 100;
+            this.actionRadioButton4.TabStop = true;
+            this.actionRadioButton4.Text = "OFF";
+            this.actionRadioButton4.UseVisualStyleBackColor = true;
             // 
             // xPositionTrackBar
             // 
@@ -541,60 +800,548 @@ namespace CameraControl
             this.yPosition.Text = "yPosition";
             this.yPosition.Click += new System.EventHandler(this.label35_Click_1);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox8);
+            this.groupBox1.Controls.Add(this.groupBox7);
+            this.groupBox1.Controls.Add(this.groupBox6);
+            this.groupBox1.Controls.Add(this.label49);
+            this.groupBox1.Controls.Add(this.label48);
+            this.groupBox1.Controls.Add(this.label47);
+            this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Location = new System.Drawing.Point(6, 683);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1005, 340);
+            this.groupBox1.TabIndex = 120;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Stage Control";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Location = new System.Drawing.Point(744, 19);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(254, 126);
+            this.groupBox8.TabIndex = 10;
+            this.groupBox8.TabStop = false;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.folderPath3);
+            this.groupBox7.Controls.Add(this.SelectFolder3);
+            this.groupBox7.Controls.Add(this.label55);
+            this.groupBox7.Controls.Add(this.StartProcessingButton);
+            this.groupBox7.Controls.Add(this.label51);
+            this.groupBox7.Controls.Add(this.numericUpDown3);
+            this.groupBox7.Controls.Add(this.label54);
+            this.groupBox7.Controls.Add(this.numericUpDown2);
+            this.groupBox7.Controls.Add(this.numericUpDown1);
+            this.groupBox7.Controls.Add(this.label53);
+            this.groupBox7.Controls.Add(this.SelectFolder2);
+            this.groupBox7.Controls.Add(this.label52);
+            this.groupBox7.Controls.Add(this.folderPath2);
+            this.groupBox7.Controls.Add(this.label50);
+            this.groupBox7.Controls.Add(this.comboBox2);
+            this.groupBox7.Location = new System.Drawing.Point(521, 151);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(477, 179);
+            this.groupBox7.TabIndex = 9;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Image Processing";
+            // 
+            // folderPath3
+            // 
+            this.folderPath3.Location = new System.Drawing.Point(132, 128);
+            this.folderPath3.Name = "folderPath3";
+            this.folderPath3.Size = new System.Drawing.Size(80, 13);
+            this.folderPath3.TabIndex = 21;
+            this.folderPath3.Text = "Folder Path";
+            // 
+            // SelectFolder3
+            // 
+            this.SelectFolder3.Location = new System.Drawing.Point(6, 121);
+            this.SelectFolder3.Name = "SelectFolder3";
+            this.SelectFolder3.Size = new System.Drawing.Size(117, 23);
+            this.SelectFolder3.TabIndex = 20;
+            this.SelectFolder3.Text = "Select Your Folder";
+            this.SelectFolder3.UseVisualStyleBackColor = true;
+            this.SelectFolder3.Click += new System.EventHandler(this.SelectFolder3_Click);
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(6, 96);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(76, 13);
+            this.label55.TabIndex = 19;
+            this.label55.Text = "Outputs Folder";
+            // 
+            // StartProcessingButton
+            // 
+            this.StartProcessingButton.Location = new System.Drawing.Point(396, 150);
+            this.StartProcessingButton.Name = "StartProcessingButton";
+            this.StartProcessingButton.Size = new System.Drawing.Size(75, 23);
+            this.StartProcessingButton.TabIndex = 18;
+            this.StartProcessingButton.Text = "Start";
+            this.StartProcessingButton.UseVisualStyleBackColor = true;
+            this.StartProcessingButton.Click += new System.EventHandler(this.StartProcessingButton_Click);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(6, 29);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(68, 13);
+            this.label51.TabIndex = 17;
+            this.label51.Text = "Inputs Folder";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(352, 53);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(117, 20);
+            this.numericUpDown3.TabIndex = 16;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(349, 30);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(99, 13);
+            this.label54.TabIndex = 15;
+            this.label54.Text = "Number of Outputs:";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(223, 121);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(117, 20);
+            this.numericUpDown2.TabIndex = 14;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(223, 53);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(117, 20);
+            this.numericUpDown1.TabIndex = 13;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(220, 96);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(82, 13);
+            this.label53.TabIndex = 12;
+            this.label53.Text = "High Threshold:";
+            // 
+            // SelectFolder2
+            // 
+            this.SelectFolder2.Location = new System.Drawing.Point(6, 53);
+            this.SelectFolder2.Name = "SelectFolder2";
+            this.SelectFolder2.Size = new System.Drawing.Size(117, 23);
+            this.SelectFolder2.TabIndex = 11;
+            this.SelectFolder2.Text = "Select Your Folder";
+            this.SelectFolder2.UseVisualStyleBackColor = true;
+            this.SelectFolder2.Click += new System.EventHandler(this.SelectFolder2_Click);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(220, 29);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(80, 13);
+            this.label52.TabIndex = 10;
+            this.label52.Text = "Low Threshold:";
+            // 
+            // folderPath2
+            // 
+            this.folderPath2.Location = new System.Drawing.Point(132, 57);
+            this.folderPath2.Name = "folderPath2";
+            this.folderPath2.Size = new System.Drawing.Size(80, 13);
+            this.folderPath2.TabIndex = 9;
+            this.folderPath2.Text = "Folder Path";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(349, 96);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(49, 13);
+            this.label50.TabIndex = 1;
+            this.label50.Text = "Channel:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(352, 120);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(117, 21);
+            this.comboBox2.TabIndex = 0;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.checkBox2);
+            this.groupBox6.Controls.Add(this.folderPath);
+            this.groupBox6.Controls.Add(this.SelectFolder);
+            this.groupBox6.Location = new System.Drawing.Point(521, 19);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(215, 126);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Where Do You Save Your Images";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 103);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(199, 17);
+            this.checkBox2.TabIndex = 0;
+            this.checkBox2.Text = "Auto Process Images After Sacnning";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // folderPath
+            // 
+            this.folderPath.Location = new System.Drawing.Point(6, 31);
+            this.folderPath.Name = "folderPath";
+            this.folderPath.Size = new System.Drawing.Size(120, 13);
+            this.folderPath.TabIndex = 8;
+            this.folderPath.Text = "Folder Path";
+            // 
+            // SelectFolder
+            // 
+            this.SelectFolder.Command = CameraControl.ActionEvent.Command.NONE;
+            this.SelectFolder.Location = new System.Drawing.Point(9, 74);
+            this.SelectFolder.Name = "SelectFolder";
+            this.SelectFolder.Size = new System.Drawing.Size(117, 23);
+            this.SelectFolder.TabIndex = 7;
+            this.SelectFolder.Text = "Select Your Folder";
+            this.SelectFolder.UseVisualStyleBackColor = true;
+            this.SelectFolder.Click += new System.EventHandler(this.SelectFolder_Click);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(517, 301);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(0, 13);
+            this.label49.TabIndex = 6;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(517, 272);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(0, 13);
+            this.label48.TabIndex = 5;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(517, 243);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(0, 13);
+            this.label47.TabIndex = 4;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.stopScanningButton);
+            this.groupBox5.Controls.Add(this.startingPositionButton);
+            this.groupBox5.Controls.Add(this.pulseScanningButton);
+            this.groupBox5.Controls.Add(this.endingPositionButton);
+            this.groupBox5.Controls.Add(this.autoScanningButton);
+            this.groupBox5.Location = new System.Drawing.Point(141, 151);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(374, 179);
+            this.groupBox5.TabIndex = 3;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Ready to Scan";
+            // 
             // stopScanningButton
             // 
             this.stopScanningButton.Command = CameraControl.ActionEvent.Command.NONE;
-            this.stopScanningButton.Location = new System.Drawing.Point(464, 816);
+            this.stopScanningButton.Location = new System.Drawing.Point(6, 140);
             this.stopScanningButton.Name = "stopScanningButton";
-            this.stopScanningButton.Size = new System.Drawing.Size(223, 23);
+            this.stopScanningButton.Size = new System.Drawing.Size(362, 23);
             this.stopScanningButton.TabIndex = 119;
             this.stopScanningButton.Text = "Stop Scanning";
             this.stopScanningButton.UseVisualStyleBackColor = true;
             this.stopScanningButton.Click += new System.EventHandler(this.stopScanningButton_Click);
             // 
+            // startingPositionButton
+            // 
+            this.startingPositionButton.Command = CameraControl.ActionEvent.Command.NONE;
+            this.startingPositionButton.Location = new System.Drawing.Point(6, 23);
+            this.startingPositionButton.Name = "startingPositionButton";
+            this.startingPositionButton.Size = new System.Drawing.Size(362, 23);
+            this.startingPositionButton.TabIndex = 112;
+            this.startingPositionButton.Text = "Confirm Your Starting Position (Top Left)";
+            this.startingPositionButton.UseVisualStyleBackColor = true;
+            this.startingPositionButton.Click += new System.EventHandler(this.StartingPositionButton_Click);
+            // 
             // pulseScanningButton
             // 
             this.pulseScanningButton.Command = CameraControl.ActionEvent.Command.NONE;
-            this.pulseScanningButton.Location = new System.Drawing.Point(464, 787);
+            this.pulseScanningButton.Location = new System.Drawing.Point(6, 111);
             this.pulseScanningButton.Name = "pulseScanningButton";
-            this.pulseScanningButton.Size = new System.Drawing.Size(223, 23);
+            this.pulseScanningButton.Size = new System.Drawing.Size(362, 23);
             this.pulseScanningButton.TabIndex = 118;
             this.pulseScanningButton.Text = "Pulse Scanning";
             this.pulseScanningButton.UseVisualStyleBackColor = true;
             this.pulseScanningButton.Click += new System.EventHandler(this.pulseScanningButton_Click);
             // 
-            // autoScanningButton
-            // 
-            this.autoScanningButton.Command = CameraControl.ActionEvent.Command.NONE;
-            this.autoScanningButton.Location = new System.Drawing.Point(464, 758);
-            this.autoScanningButton.Name = "autoScanningButton";
-            this.autoScanningButton.Size = new System.Drawing.Size(223, 23);
-            this.autoScanningButton.TabIndex = 114;
-            this.autoScanningButton.Text = "Start auto scanning!";
-            this.autoScanningButton.UseVisualStyleBackColor = true;
-            this.autoScanningButton.Click += new System.EventHandler(this.AutoScanningButton_Click);
-            // 
             // endingPositionButton
             // 
             this.endingPositionButton.Command = CameraControl.ActionEvent.Command.NONE;
-            this.endingPositionButton.Location = new System.Drawing.Point(464, 728);
+            this.endingPositionButton.Location = new System.Drawing.Point(6, 52);
             this.endingPositionButton.Name = "endingPositionButton";
-            this.endingPositionButton.Size = new System.Drawing.Size(223, 23);
+            this.endingPositionButton.Size = new System.Drawing.Size(362, 23);
             this.endingPositionButton.TabIndex = 113;
             this.endingPositionButton.Text = "Comfirm Your Ending Position (Botton Right)";
             this.endingPositionButton.UseVisualStyleBackColor = true;
             this.endingPositionButton.Click += new System.EventHandler(this.EndingPositionButton_Click);
             // 
-            // startingPositionButton
+            // autoScanningButton
             // 
-            this.startingPositionButton.Command = CameraControl.ActionEvent.Command.NONE;
-            this.startingPositionButton.Location = new System.Drawing.Point(464, 699);
-            this.startingPositionButton.Name = "startingPositionButton";
-            this.startingPositionButton.Size = new System.Drawing.Size(223, 23);
-            this.startingPositionButton.TabIndex = 112;
-            this.startingPositionButton.Text = "Confirm Your Starting Position (Top Left)";
-            this.startingPositionButton.UseVisualStyleBackColor = true;
-            this.startingPositionButton.Click += new System.EventHandler(this.StartingPositionButton_Click);
+            this.autoScanningButton.Command = CameraControl.ActionEvent.Command.NONE;
+            this.autoScanningButton.Location = new System.Drawing.Point(6, 82);
+            this.autoScanningButton.Name = "autoScanningButton";
+            this.autoScanningButton.Size = new System.Drawing.Size(362, 23);
+            this.autoScanningButton.TabIndex = 114;
+            this.autoScanningButton.Text = "Start auto scanning!";
+            this.autoScanningButton.UseVisualStyleBackColor = true;
+            this.autoScanningButton.Click += new System.EventHandler(this.AutoScanningButton_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.checkBox3);
+            this.groupBox4.Controls.Add(this.label45);
+            this.groupBox4.Controls.Add(this.label44);
+            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.label43);
+            this.groupBox4.Controls.Add(this.label39);
+            this.groupBox4.Location = new System.Drawing.Point(141, 19);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(374, 126);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Set Parameters";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(9, 90);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(91, 17);
+            this.checkBox3.TabIndex = 6;
+            this.checkBox3.Text = "Use Encoder:";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(232, 59);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(139, 13);
+            this.label45.TabIndex = 5;
+            this.label45.Text = "mm (0.024 is recommended)";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(232, 27);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(139, 13);
+            this.label44.TabIndex = 4;
+            this.label44.Text = "mm (0.036 is recommended)";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(126, 56);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(126, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(6, 59);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(114, 13);
+            this.label43.TabIndex = 1;
+            this.label43.Text = "The step length of y is:";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(6, 27);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(114, 13);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "The step length of x is:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label46);
+            this.groupBox3.Controls.Add(this.label42);
+            this.groupBox3.Controls.Add(this.label41);
+            this.groupBox3.Controls.Add(this.label40);
+            this.groupBox3.Controls.Add(this.label38);
+            this.groupBox3.Controls.Add(this.label37);
+            this.groupBox3.Controls.Add(this.label36);
+            this.groupBox3.Controls.Add(this.label35);
+            this.groupBox3.Controls.Add(this.bt_getpos);
+            this.groupBox3.Location = new System.Drawing.Point(16, 151);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(119, 179);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // label46
+            // 
+            this.label46.Location = new System.Drawing.Point(43, 54);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(70, 13);
+            this.label46.TabIndex = 9;
+            this.label46.Text = "label46";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label42
+            // 
+            this.label42.Location = new System.Drawing.Point(43, 124);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(70, 13);
+            this.label42.TabIndex = 8;
+            this.label42.Text = "label42";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label41
+            // 
+            this.label41.Location = new System.Drawing.Point(43, 101);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(70, 13);
+            this.label41.TabIndex = 7;
+            this.label41.Text = "label41";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label40
+            // 
+            this.label40.Location = new System.Drawing.Point(43, 77);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(70, 13);
+            this.label40.TabIndex = 6;
+            this.label40.Text = "label40";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(10, 124);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(14, 13);
+            this.label38.TabIndex = 4;
+            this.label38.Text = "A";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(10, 101);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(14, 13);
+            this.label37.TabIndex = 3;
+            this.label37.Text = "Z";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(10, 77);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(14, 13);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "Y";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(10, 54);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(14, 13);
+            this.label35.TabIndex = 1;
+            this.label35.Text = "X";
+            // 
+            // bt_getpos
+            // 
+            this.bt_getpos.Location = new System.Drawing.Point(22, 19);
+            this.bt_getpos.Name = "bt_getpos";
+            this.bt_getpos.Size = new System.Drawing.Size(75, 23);
+            this.bt_getpos.TabIndex = 0;
+            this.bt_getpos.Text = "Get Position";
+            this.bt_getpos.UseVisualStyleBackColor = true;
+            this.bt_getpos.Click += new System.EventHandler(this.bt_getpos_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.bt_disconnect);
+            this.groupBox2.Controls.Add(this.bt_connect);
+            this.groupBox2.Location = new System.Drawing.Point(16, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(119, 126);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Connection";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(13, 103);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(95, 17);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "Show Protocol";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(22, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(75, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // bt_disconnect
+            // 
+            this.bt_disconnect.Location = new System.Drawing.Point(22, 75);
+            this.bt_disconnect.Name = "bt_disconnect";
+            this.bt_disconnect.Size = new System.Drawing.Size(75, 23);
+            this.bt_disconnect.TabIndex = 1;
+            this.bt_disconnect.Text = "Disconnect";
+            this.bt_disconnect.UseVisualStyleBackColor = true;
+            this.bt_disconnect.Click += new System.EventHandler(this.bt_disconnect_Click);
+            // 
+            // bt_connect
+            // 
+            this.bt_connect.Location = new System.Drawing.Point(22, 46);
+            this.bt_connect.Name = "bt_connect";
+            this.bt_connect.Size = new System.Drawing.Size(75, 23);
+            this.bt_connect.TabIndex = 0;
+            this.bt_connect.Text = "Connect";
+            this.bt_connect.UseVisualStyleBackColor = true;
+            this.bt_connect.Click += new System.EventHandler(this.bt_connect_Click);
             // 
             // actionButton26
             // 
@@ -617,30 +1364,6 @@ namespace CameraControl
             this.actionButton25.Text = "Click AF Point";
             this.actionButton25.UseVisualStyleBackColor = true;
             // 
-            // actionRadioButton3
-            // 
-            this.actionRadioButton3.AutoSize = true;
-            this.actionRadioButton3.Command = CameraControl.ActionEvent.Command.NONE;
-            this.actionRadioButton3.Location = new System.Drawing.Point(7, 3);
-            this.actionRadioButton3.Name = "actionRadioButton3";
-            this.actionRadioButton3.Size = new System.Drawing.Size(41, 17);
-            this.actionRadioButton3.TabIndex = 99;
-            this.actionRadioButton3.TabStop = true;
-            this.actionRadioButton3.Text = "ON";
-            this.actionRadioButton3.UseVisualStyleBackColor = true;
-            // 
-            // actionRadioButton4
-            // 
-            this.actionRadioButton4.AutoSize = true;
-            this.actionRadioButton4.Command = CameraControl.ActionEvent.Command.NONE;
-            this.actionRadioButton4.Location = new System.Drawing.Point(7, 27);
-            this.actionRadioButton4.Name = "actionRadioButton4";
-            this.actionRadioButton4.Size = new System.Drawing.Size(45, 17);
-            this.actionRadioButton4.TabIndex = 100;
-            this.actionRadioButton4.TabStop = true;
-            this.actionRadioButton4.Text = "OFF";
-            this.actionRadioButton4.UseVisualStyleBackColor = true;
-            // 
             // actionButton24
             // 
             this.actionButton24.Command = CameraControl.ActionEvent.Command.NONE;
@@ -660,30 +1383,6 @@ namespace CameraControl
             this.actionButton23.TabIndex = 104;
             this.actionButton23.Text = "RollPitch On/Off";
             this.actionButton23.UseVisualStyleBackColor = true;
-            // 
-            // actionRadioButton1
-            // 
-            this.actionRadioButton1.AutoSize = true;
-            this.actionRadioButton1.Command = CameraControl.ActionEvent.Command.NONE;
-            this.actionRadioButton1.Location = new System.Drawing.Point(7, 3);
-            this.actionRadioButton1.Name = "actionRadioButton1";
-            this.actionRadioButton1.Size = new System.Drawing.Size(70, 17);
-            this.actionRadioButton1.TabIndex = 99;
-            this.actionRadioButton1.TabStop = true;
-            this.actionRadioButton1.Text = "StillImage";
-            this.actionRadioButton1.UseVisualStyleBackColor = true;
-            // 
-            // actionRadioButton2
-            // 
-            this.actionRadioButton2.AutoSize = true;
-            this.actionRadioButton2.Command = CameraControl.ActionEvent.Command.NONE;
-            this.actionRadioButton2.Location = new System.Drawing.Point(7, 27);
-            this.actionRadioButton2.Name = "actionRadioButton2";
-            this.actionRadioButton2.Size = new System.Drawing.Size(81, 17);
-            this.actionRadioButton2.TabIndex = 100;
-            this.actionRadioButton2.TabStop = true;
-            this.actionRadioButton2.Text = "MovieMode";
-            this.actionRadioButton2.UseVisualStyleBackColor = true;
             // 
             // actionButton22
             // 
@@ -969,6 +1668,7 @@ namespace CameraControl
             this.actionButton1.TabIndex = 0;
             this.actionButton1.Text = "Take Picture";
             this.actionButton1.UseVisualStyleBackColor = true;
+            this.actionButton1.Click += new System.EventHandler(this.actionButton1_Click);
             // 
             // evfPictureBox1
             // 
@@ -981,171 +1681,15 @@ namespace CameraControl
             this.evfPictureBox1.TabStop = false;
             this.evfPictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.evfPictureBox1_MouseClick);
             // 
-            // movieHFR1
-            // 
-            this.movieHFR1.BackColor = System.Drawing.SystemColors.Window;
-            this.movieHFR1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.movieHFR1.Enabled = false;
-            this.movieHFR1.FormattingEnabled = true;
-            this.movieHFR1.Location = new System.Drawing.Point(98, 450);
-            this.movieHFR1.Name = "movieHFR1";
-            this.movieHFR1.Size = new System.Drawing.Size(221, 21);
-            this.movieHFR1.TabIndex = 111;
-            // 
-            // aspect1
-            // 
-            this.aspect1.BackColor = System.Drawing.SystemColors.Window;
-            this.aspect1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.aspect1.Enabled = false;
-            this.aspect1.FormattingEnabled = true;
-            this.aspect1.Location = new System.Drawing.Point(98, 512);
-            this.aspect1.Name = "aspect1";
-            this.aspect1.Size = new System.Drawing.Size(221, 21);
-            this.aspect1.TabIndex = 109;
-            // 
-            // pictureStyle1
-            // 
-            this.pictureStyle1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pictureStyle1.Enabled = false;
-            this.pictureStyle1.FormattingEnabled = true;
-            this.pictureStyle1.Location = new System.Drawing.Point(98, 481);
-            this.pictureStyle1.Name = "pictureStyle1";
-            this.pictureStyle1.Size = new System.Drawing.Size(221, 21);
-            this.pictureStyle1.TabIndex = 93;
-            // 
-            // movieQuality1
-            // 
-            this.movieQuality1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.movieQuality1.Enabled = false;
-            this.movieQuality1.FormattingEnabled = true;
-            this.movieQuality1.Location = new System.Drawing.Point(98, 416);
-            this.movieQuality1.Name = "movieQuality1";
-            this.movieQuality1.Size = new System.Drawing.Size(221, 21);
-            this.movieQuality1.TabIndex = 91;
-            // 
-            // driveMode1
-            // 
-            this.driveMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.driveMode1.Enabled = false;
-            this.driveMode1.FormattingEnabled = true;
-            this.driveMode1.Location = new System.Drawing.Point(98, 311);
-            this.driveMode1.Name = "driveMode1";
-            this.driveMode1.Size = new System.Drawing.Size(221, 21);
-            this.driveMode1.TabIndex = 8;
-            // 
-            // imageQuality1
-            // 
-            this.imageQuality1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.imageQuality1.Enabled = false;
-            this.imageQuality1.FormattingEnabled = true;
-            this.imageQuality1.Location = new System.Drawing.Point(98, 275);
-            this.imageQuality1.Name = "imageQuality1";
-            this.imageQuality1.Size = new System.Drawing.Size(221, 21);
-            this.imageQuality1.TabIndex = 7;
-            // 
-            // exposureComp1
-            // 
-            this.exposureComp1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.exposureComp1.Enabled = false;
-            this.exposureComp1.FormattingEnabled = true;
-            this.exposureComp1.Location = new System.Drawing.Point(98, 239);
-            this.exposureComp1.Name = "exposureComp1";
-            this.exposureComp1.Size = new System.Drawing.Size(221, 21);
-            this.exposureComp1.TabIndex = 6;
-            // 
-            // meteringMode1
-            // 
-            this.meteringMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.meteringMode1.Enabled = false;
-            this.meteringMode1.FormattingEnabled = true;
-            this.meteringMode1.Location = new System.Drawing.Point(98, 205);
-            this.meteringMode1.Name = "meteringMode1";
-            this.meteringMode1.Size = new System.Drawing.Size(221, 21);
-            this.meteringMode1.TabIndex = 5;
-            // 
-            // whiteBalance1
-            // 
-            this.whiteBalance1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.whiteBalance1.Enabled = false;
-            this.whiteBalance1.FormattingEnabled = true;
-            this.whiteBalance1.Location = new System.Drawing.Point(98, 170);
-            this.whiteBalance1.Name = "whiteBalance1";
-            this.whiteBalance1.Size = new System.Drawing.Size(221, 21);
-            this.whiteBalance1.TabIndex = 4;
-            // 
-            // iso1
-            // 
-            this.iso1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.iso1.Enabled = false;
-            this.iso1.FormattingEnabled = true;
-            this.iso1.Location = new System.Drawing.Point(98, 135);
-            this.iso1.Name = "iso1";
-            this.iso1.Size = new System.Drawing.Size(221, 21);
-            this.iso1.TabIndex = 3;
-            // 
-            // av1
-            // 
-            this.av1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.av1.Enabled = false;
-            this.av1.FormattingEnabled = true;
-            this.av1.Location = new System.Drawing.Point(98, 101);
-            this.av1.Name = "av1";
-            this.av1.Size = new System.Drawing.Size(221, 21);
-            this.av1.TabIndex = 2;
-            // 
-            // tv1
-            // 
-            this.tv1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tv1.Enabled = false;
-            this.tv1.FormattingEnabled = true;
-            this.tv1.Location = new System.Drawing.Point(98, 66);
-            this.tv1.Name = "tv1";
-            this.tv1.Size = new System.Drawing.Size(221, 21);
-            this.tv1.TabIndex = 1;
-            // 
-            // aeMode1
-            // 
-            this.aeMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.aeMode1.Enabled = false;
-            this.aeMode1.FormattingEnabled = true;
-            this.aeMode1.Location = new System.Drawing.Point(98, 31);
-            this.aeMode1.Name = "aeMode1";
-            this.aeMode1.Size = new System.Drawing.Size(221, 21);
-            this.aeMode1.TabIndex = 0;
-            // 
-            // afMode1
-            // 
-            this.afMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.afMode1.Enabled = false;
-            this.afMode1.FormattingEnabled = true;
-            this.afMode1.Location = new System.Drawing.Point(98, 347);
-            this.afMode1.Name = "afMode1";
-            this.afMode1.Size = new System.Drawing.Size(221, 21);
-            this.afMode1.TabIndex = 9;
-            // 
-            // flashMode1
-            // 
-            this.flashMode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.flashMode1.Enabled = false;
-            this.flashMode1.FormattingEnabled = true;
-            this.flashMode1.Location = new System.Drawing.Point(98, 381);
-            this.flashMode1.Name = "flashMode1";
-            this.flashMode1.Size = new System.Drawing.Size(221, 21);
-            this.flashMode1.TabIndex = 10;
-            // 
             // RemoteCapture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 889);
-            this.Controls.Add(this.stopScanningButton);
-            this.Controls.Add(this.pulseScanningButton);
+            this.ClientSize = new System.Drawing.Size(1023, 1035);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.yPosition);
             this.Controls.Add(this.xPosition);
             this.Controls.Add(this.label34);
-            this.Controls.Add(this.autoScanningButton);
-            this.Controls.Add(this.endingPositionButton);
-            this.Controls.Add(this.startingPositionButton);
             this.Controls.Add(this.yPositionTrackBar);
             this.Controls.Add(this.xPositionTrackBar);
             this.Controls.Add(this.actionButton26);
@@ -1215,6 +1759,22 @@ namespace CameraControl
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xPositionTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yPositionTrackBar)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zoom1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evfPictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -1322,5 +1882,54 @@ namespace CameraControl
         private System.Windows.Forms.Label yPosition;
         private ActionButton pulseScanningButton;
         private ActionButton stopScanningButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button bt_disconnect;
+        private System.Windows.Forms.Button bt_connect;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button bt_getpos;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private ActionButton SelectFolder;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label folderPath;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button SelectFolder2;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label folderPath2;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Button StartProcessingButton;
+        private System.Windows.Forms.Label folderPath3;
+        private System.Windows.Forms.Button SelectFolder3;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.GroupBox groupBox8;
     }
 }

@@ -36,15 +36,16 @@ namespace CameraControl
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(71, 30);
+            this.button1.Location = new System.Drawing.Point(71, 32);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 23);
+            this.button1.Size = new System.Drawing.Size(148, 25);
             this.button1.TabIndex = 0;
             this.button1.Text = "Remote Capture";
             this.button1.UseVisualStyleBackColor = true;
@@ -53,9 +54,9 @@ namespace CameraControl
             // button2
             // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(31, 25);
+            this.button2.Location = new System.Drawing.Point(31, 27);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 23);
+            this.button2.Size = new System.Drawing.Size(148, 25);
             this.button2.TabIndex = 2;
             this.button2.Text = "Memory Card 1";
             this.button2.UseVisualStyleBackColor = true;
@@ -63,9 +64,9 @@ namespace CameraControl
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(71, 72);
+            this.button3.Location = new System.Drawing.Point(71, 78);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 23);
+            this.button3.Size = new System.Drawing.Size(148, 25);
             this.button3.TabIndex = 1;
             this.button3.Text = "Camera Setting";
             this.button3.UseVisualStyleBackColor = true;
@@ -74,9 +75,9 @@ namespace CameraControl
             // button5
             // 
             this.button5.Enabled = false;
-            this.button5.Location = new System.Drawing.Point(31, 71);
+            this.button5.Location = new System.Drawing.Point(31, 77);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 23);
+            this.button5.Size = new System.Drawing.Size(148, 25);
             this.button5.TabIndex = 4;
             this.button5.Text = "Memory Card 2";
             this.button5.UseVisualStyleBackColor = true;
@@ -86,9 +87,9 @@ namespace CameraControl
             // 
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Location = new System.Drawing.Point(40, 114);
+            this.groupBox1.Location = new System.Drawing.Point(40, 171);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 110);
+            this.groupBox1.Size = new System.Drawing.Size(200, 119);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "File Download";
@@ -97,9 +98,9 @@ namespace CameraControl
             // 
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Location = new System.Drawing.Point(40, 230);
+            this.groupBox2.Location = new System.Drawing.Point(40, 296);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 108);
+            this.groupBox2.Size = new System.Drawing.Size(200, 117);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "File Delete";
@@ -107,9 +108,9 @@ namespace CameraControl
             // button7
             // 
             this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(31, 25);
+            this.button7.Location = new System.Drawing.Point(31, 27);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(148, 23);
+            this.button7.Size = new System.Drawing.Size(148, 25);
             this.button7.TabIndex = 2;
             this.button7.Text = "Memory Card 1";
             this.button7.UseVisualStyleBackColor = true;
@@ -118,19 +119,30 @@ namespace CameraControl
             // button8
             // 
             this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(31, 71);
+            this.button8.Location = new System.Drawing.Point(31, 77);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(148, 23);
+            this.button8.Size = new System.Drawing.Size(148, 25);
             this.button8.TabIndex = 4;
             this.button8.Text = "Memory Card 2";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(71, 129);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(148, 25);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Flake Inspection";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 350);
+            this.ClientSize = new System.Drawing.Size(284, 503);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -154,6 +166,7 @@ namespace CameraControl
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button4;
     }
 }
 

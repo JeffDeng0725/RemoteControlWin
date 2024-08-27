@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|c:\\users\\nanouser\\autojeff\\remotecontrolwin\\vs2017_csharp\\vs2017_csharp_triggerexample\\windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|solutionrelative:windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|c:\\users\\nanouser\\autojeff\\remotecontrolwin\\vs2017_csharp\\vs2017_csharp_triggerexample\\windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|solutionrelative:windowsformsapplication1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\windowsformsapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|solutionrelative:windowsformsapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\windowsformsapplication1\\form1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|solutionrelative:windowsformsapplication1\\form1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\windowsformsapplication1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|solutionrelative:windowsformsapplication1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\windowsformsapplication1\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|solutionrelative:windowsformsapplication1\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\windowsformsapplication1\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|solutionrelative:windowsformsapplication1\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\windowsformsapplication1\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C1295DA-C60E-4DBE-A7FD-6EA1027A0D3A}|WindowsFormsApplication1\\Tango_VS2017_TriggerExample.csproj|solutionrelative:windowsformsapplication1\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Form1.cs",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApplication1\\Form1.cs",
+              "ViewState": "AQIAAN4AAAAAAAAAAAAAAJgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T22:00:32.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Properties\\Settings.settings",
+              "RelativeToolTip": "WindowsFormsApplication1\\Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2024-08-15T21:48:39.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.resx",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Form1.resx",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Form1.resx",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Form1.resx",
+              "RelativeToolTip": "WindowsFormsApplication1\\Form1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-08-15T21:47:51.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Form1.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApplication1\\Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T21:47:53.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Program.cs",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Program.cs",
+              "RelativeToolTip": "WindowsFormsApplication1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T21:47:54.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Properties\\Resources.resx",
+              "RelativeToolTip": "WindowsFormsApplication1\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-08-15T21:48:38.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "WindowsFormsApplication1\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T21:48:05.381Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApplication1\\Form1.cs",
+              "ToolTip": "C:\\Users\\nanouser\\AutoJeff\\RemoteControlWin\\VS2017_Csharp\\VS2017_Csharp_TriggerExample\\WindowsFormsApplication1\\Form1.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApplication1\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T21:59:33.178Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

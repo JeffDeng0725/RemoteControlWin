@@ -26,6 +26,7 @@ namespace CameraControl
         private List<ActionListener> _actionListenerList = new List<ActionListener>();
         private IObserver formAs = null;
         private Form _remoteCapture = null;
+        private Form _flakeInspection = null;
         private IntPtr[] _volumes = new IntPtr[2];
         private int _volume_count = 0;
 
@@ -247,6 +248,13 @@ namespace CameraControl
         private void MainWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //_flakeInspection = new flakeInspection();
+            //_flakeInspection.ShowDialog();
+            //_flakeInspection.Dispose();
         }
     }
 }
